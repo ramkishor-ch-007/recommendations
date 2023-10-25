@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Recommendation</title>
+</head>
+<body>
+    <h1>Content Recommendation</h1>
+    <form method="post">
+        <label for="user_id">Enter User ID: </label>
+        <input type="text" id="user_id" name="user_id" value="{{ user_id }}" placeholder="user1, user2, user3">
+        <input type="submit" value="Recommend">
+    </form>
+    <p>Recommended content for {{ user_id }}:</p>
+    <ul>
+        {% for content in recommended_content %}
+            <li>{{ content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
